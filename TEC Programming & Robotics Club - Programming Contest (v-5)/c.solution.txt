@@ -8,19 +8,27 @@
 using namespace std;
 
 void solve(){
+     int t;
+     cin>>t;
+     while(t--)
+     {
+         int x,y,z,a,b,c,d;
+         cin>>x>>y>>z;
+         cin>>a>>b>>c>>d;
+         int e = d+b+abs(c-a);
+          int f = (y-d)+ (y-b)+abs(c-a);
+           int g = a + c + abs(d-b);
 
-int t;
-    cin >> t;
+          int h = (x-a)+ (x-c)+abs(d-b);
+          int result = z + min(e,min(f,min(g,h)));
 
-    for (int i = 1; i <= t; i++) {
-        int x, y;
-        cin >> x >> y;
-        int total = x + y;
-        cout << "Case " << i << ": " << total << endl;
-    }
+         cout << result<<endl;
+     }
+
 }
 
 int main(){
     solve();
     return 0;
 }
+
